@@ -1,27 +1,5 @@
 "use strict";
 
-/* 
-// : URL TO CONCEPT: https://www.youtube.com/watch?time_continue=1243&v=hh-uFQ-MGfw
-// The traveling salesman problem, or TSP, is an idea in data algorithms that concerns the idea of 
-// 		visiting every node in a grid only once starting from a specific starting point and finding the path with the lowest weight
-//		For example, if we have nodes A, B, C, and D, we would have to find the path through all these nodes that would cost the least
-// 		There are several caveats to this idea:
-//		1. you must visit each node ONLY ONCE. The only exception is the starting node, because...
-// 		2. you must return to the starting node upon reaching every node in a graph
-//		3. A node must have at least two vertices to allow for the TSP to apply - a node cannot have only one vertex because 
-//			doing so would force you to revisit one node you've already touched previously, rendering the problem moot
-//		4. If there are two vertices between two nodes representing going forward and backward, they MAY have different weights attributed to them
-//
-// To execute this function, type "node tsp.js" into the terminal after changing your working directory.
-*/
-
-const util = require('util');
-
-// : Pretty prints error responses
-function prettyPrintResponse(response) {
-  console.log(util.inspect(response, {colors: true, depth: 4}));
-}
-
 function getRandomInt(max) {
 	return Math.floor(Math.random() * Math.floor(max));
 }
@@ -45,20 +23,20 @@ class TSP {
 		console.log(this.matrix);
 	}
 	start() {
-		prettyPrintResponse('Starting TSP attempt')
+		console.log('Starting TSP attempt')
 		var _this = this;
 		_this.nodes = _this.convertToNodes();
-		prettyPrintResponse('All nodes within our matrix:');
-		prettyPrintResponse(_this.nodes);
+		console.log('All nodes within our matrix:');
+		console.log(_this.nodes);
 		var {start,targets} = _this.determineStart(_this.nodes);
-		prettyPrintResponse('Starting Node:');
-		prettyPrintResponse(start);
-		prettyPrintResponse('Target Nodes From Start:');
-		prettyPrintResponse(targets);
-		prettyPrintResponse('Initializing tsp() function...');
+		console.log('Starting Node:');
+		console.log(start);
+		console.log('Target Nodes From Start:');
+		console.log(targets);
+		console.log('Initializing tsp() function...');
 		var result = _this.tsp(_this,start,start,targets);
-		prettyPrintResponse('Our shortest path is...!')
-		prettyPrintResponse(result);
+		console.log('Our shortest path is...!')
+		console.log(result);
 	}
 	convertToNodes() {
 		var _this = this;
