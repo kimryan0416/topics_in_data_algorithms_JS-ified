@@ -6,6 +6,8 @@ The algorithm used is based on **"Depth-First Search"** (DFS) and has O(N+M) com
 
 The concept is that if we are looking at a vertex "to" from some vertex "v" then the edge connecting "v" to "to" will be a bridge if and only if none of the vertices "to" and its descendants in the DFS traversal tree has a edge that goes back to "v" or any of its ancestors. In other words, there is no other way back to "v" except for (v,to)
 
+Practical use cases of finding bridges in a graph include determining vulnerabilities in a connected network and designing reliable networks. For example, in a wired computer network, a bridge is an indicator of critical connections between components in said network.
+
 ## Example
 
 An important concept to cover is time complexity. Let's say, for the sake of the idea, that we have a graph consisting of vertexes A, B, C, D, and E and our selected root is A:
