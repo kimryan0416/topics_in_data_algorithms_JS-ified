@@ -6,14 +6,16 @@ The algorithm used is based on **"Depth-First Search"** (DFS) and has O(N+M) com
 
 The concept is that if we are looking at a vertex "to" from some vertex "v" then the edge connecting "v" to "to" will be a bridge if and only if none of the vertices "to" and its descendants in the DFS traversal tree has a edge that goes back to "v" or any of its ancestors. In other words, there is no other way back to "v" except for (v,to)
 
-## Time Complexity Example
+## Example
 
 An important concept to cover is time complexity. Let's say, for the sake of the idea, that we have a graph consisting of vertexes A, B, C, D, and E and our selected root is A:
 
-A is neighbors with B,C,D
-B is neighbors with A,C,D,E
-C is neighbors with A,B
-D is neighbors with A,B
+* A is neighbors with B,C,D
+* B is neighbors with A,C,D,E
+* C is neighbors with A,B
+* D is neighbors with A,B
+
+We will attempt to traverse this graph as follows:
 
 1. From "root", "root" has a starting time of 1. We can go to either "B", "C", or "D".
 2. Let's say we traverse to "B". "B" now has a starting time of 2, and we can go to either "C", "D", or "E" - "B" has technically 4 neighbors (A, C, D, E), but since this is DFS we have to continue to one of "B"'s descendants, which are "C", "D', and "E".
