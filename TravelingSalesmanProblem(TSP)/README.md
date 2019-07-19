@@ -21,8 +21,10 @@ References:
 
 ## Example Graphs:
 
-Row = the destination node
-Column = the starting node
+* Row = the destination node
+* Column = the starting node
+
+### Example 1:
 
 | Start | A | B | C | D |
 |:--|:--|:--|:--|:--|
@@ -33,17 +35,19 @@ Column = the starting node
 
 For example, A -> B costs 99, and B -> A costs 1
 
-DABCD = 21+99+89+99 = 308
-DACBD = 21+44+31+4 = 100
-DBACD = 82+1+44+99 = 226
-DBCAD = 82+89+8+88 = 267
-DCABD = 51+8+99+4 = 162
-DCBAD = 51+31+1+88 = 171
+* DABCD = 21+99+89+99 = 308
+* DACBD = 21+44+31+4 = 100
+* DBACD = 82+1+44+99 = 226
+* DBCAD = 82+89+8+88 = 267
+* DCABD = 51+8+99+4 = 162
+* DCBAD = 51+31+1+88 = 171
 
-projected answer = 100
-calculated answer = 100
+* projected answer = 100
+* calculated answer = 100
 
 ---
+
+### Example #2:
 
 | Start | A | B | C | D |
 |:--|:--|:--|:--|:--|
@@ -52,18 +56,19 @@ calculated answer = 100
 | C | 98| 67| 0 | 56|
 | D | 62| 52| 42| 0 |
 
-ABCDA = 8+21+56+62 = 147
-ABDCA = 8+44+42+98 = 192
-ACBDA = 49+67+44+62 = 222
-ACDBA = 49+56+52+90 = 247
-ADBCA = 80+52+21+98 = 251
-ADCBA = 80+42+67+90 = 279
+* ABCDA = 8+21+56+62 = 147
+* ABDCA = 8+44+42+98 = 192
+* ACBDA = 49+67+44+62 = 222
+* ACDBA = 49+56+52+90 = 247
+* ADBCA = 80+52+21+98 = 251
+* ADCBA = 80+42+67+90 = 279
 
-projectd answer = 147
-calculated answer = 147
-CORRECT
+* projectd answer = 147
+* calculated answer = 147
 
 ---
+
+### Example #3:
 
 | Start | A | B | C | D |
 |:--|:--|:--|:--|:--|
@@ -72,13 +77,12 @@ CORRECT
 | C | 57| 40| 0 | 48|
 | D | 61| 32| 83| 0 |
 
-ABCDA = 64+73+48+61 = 246
-ABDCA = 64+96+83+57 = 300
-ACBDA = 85+40+96+61 = 282
-ACDBA = 85+48+32+97 = 262
-ADBCA = 7+32+73+57 = 169
-ADCBA = 7+83+40+97 = 227
+* ABCDA = 64+73+48+61 = 246
+* ABDCA = 64+96+83+57 = 300
+* ACBDA = 85+40+96+61 = 282
+* ACDBA = 85+48+32+97 = 262
+* ADBCA = 7+32+73+57 = 169
+* ADCBA = 7+83+40+97 = 227
 
-projected answer = 169
-calculated answer = 169
-CORRECT
+* projected answer = 169
+* calculated answer = 169
