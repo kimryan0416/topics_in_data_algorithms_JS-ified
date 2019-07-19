@@ -44,4 +44,3 @@ For a more formal definition of how our BFS algorithm detects a cycle:
 
 ## References:
 * [Visual Description of Finding Cycles - Jenny's Lectures](https://www.youtube.com/watch?v=vXrv3kruvwE)
-* [Formulaic Description of nBridges - CP Algorithms](https://cp-algorithms.com/graph/bridge-searching.html)
