@@ -13,7 +13,7 @@ There are several caveats to this idea:
 
 The solution of TSP has several applications, such as planning, scheduling, logistics and packing. In general - complex optimization problems. In many applications, additional constraints such as  limited resources or time windows may be imposed.
 
-To execute this function, type "node tsp.js" into the terminal after changing your working directory to this folder.
+To execute this function, type ``node tsp.js`` into the terminal after changing your working directory to this folder.
 
 References:
 * [Visual Description of TSP - Jenny's Lectures](https://www.youtube.com/watch?v=hh-uFQ-MGfw)
