@@ -1,32 +1,3 @@
-/*
-// : Finding the number of bridges in a graph
-// Video: https://www.youtube.com/watch?v=CsGP_s_3GWg
-// Text: https://cp-algorithms.com/graph/bridge-searching.html
-// In this scenario, we need to find the number of "bridges" in a given graph
-// 		A "bridge" is an edge in a graph that, when erased, will increase the number of components in a graph.
-//		In other words, erasing a "bridge" will disconnect the graph into parts.
-// The algorithm used is based on "Depth-First Search" (DFS) and has O(N+M) complexity - N = number of vertices, M = number of edges
-// 		The concept is that if we are looking at a vertex "to" from some vertex "v" then 
-//		the edge connecting "v" to "to" will be a bridge if and only if none of the vertices "to" and its descendants in the 
-//		DFS traversal tree has a edge that goes back to "v" or any of its ancestors. 
-//		In other words, there is no other way back to "v" except for (v,to)
-//
-// An important concept to cover is time complexity. Let's say that at our selected root, we have time of 1.
-//		Let's say from "root", we can go to either "A" or "B". If we go to "A", "A"'s discovery time is 2.
-//		Let's say from "A", we can go to either "C" or "D". If we got to "D", "D"'s discovery time is 3. And so on
-//		For the sake of argument, let's say that "D" loops back to "A" and nothing else.
-//		Our graph would look somethign like this: root - A - C - D - A
-//		Our graph, with discovery time, would look like this: 0 - 1 - 2 - 3 - 1
-//		Pay close attention to how C is a parent of D and how D is a parent of A who just happens to be a parent of C.
-// 		If D has any descendants (in this, A) who already has a discovery time that is less than D's ancestor, then we know (C,D) is NOT a bridge
-*/
-
-const util = require('util');
-
-// : Pretty prints error responses
-function prettyPrintResponse(response) {
-  console.log(util.inspect(response, {colors: true, depth: 4}));
-}
 // : Get a random integer
 function getRandomInt(max) {
 	return Math.floor(Math.random() * Math.floor(max));
@@ -44,12 +15,12 @@ class nBridges {
 		if (_this.vertices.length == 0 ) _this.vertices = _this.generateRandomGraph();
 		_this.startingTime = 0;
 		_this.bridges = [];
-		prettyPrintResponse('This graph contains the following vertices:');
-		prettyPrintResponse(_this.vertices);
-		prettyPrintResponse('Starting Search...');
+		console.log('This graph contains the following vertices:');
+		console.log(_this.vertices);
+		console.log('Starting Search...');
 		if (!_this.startVertex) _this.startVertex = _this.vertices[Math.floor(Math.random()*_this.vertices.length)];
 		_this.search(_this,_this.startVertex,null);
-		prettyPrintResponse('The bridges present in this graph are:');
+		console.log('The bridges present in this graph are:');
 		console.log(_this.bridges)
 
 	}
